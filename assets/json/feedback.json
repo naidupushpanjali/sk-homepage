@@ -1,0 +1,25 @@
+{
+  "welcomePerson": "Pushpa",
+  "questionaire": [
+    {
+      "id": "1",
+      "question":
+        "We’ve built a comprehensive report for you, Rate and let us know what you feel about it.",
+      "image_web": "./assets/images/Illustration-1 (1).svg",
+      "image_mobile": "./assets/images/mob-2.svg"
+    },
+    {
+      "id": "2",
+      "question": "test-2",
+      "image_web": "./assets/images/Group 712.svg",
+      "image_mobile": "123.png"
+    },
+    {
+      "id": "3",
+      "question":
+        "We’ve built a comprehensive report for you, Rate and let us know what you feel about it 3.",
+      "image_web": "./assets/images/Group 676.svg",
+      "image_mobile": "123.png"
+    }
+  ]
+}

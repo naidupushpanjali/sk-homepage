@@ -1,0 +1,107 @@
+//Base file
+$primary_color: #3c5061;
+$href_color: #526771;
+$font_header: 15px;
+$brand_color: #DFC822;
+$text_color: #4d4d4d;
+$shine: 0 0 10px white;
+$on-bg: rgba(0, 0, 0, 0.15);
+$on-dot-color: #DFC822;
+$on-border: 2px solid #DFC822;
+$off-bg: rgba(255, 255, 255, 0.15);
+$off-dot-color: #eee;
+$off-border: 2px solid white;
+$togglebutton-size: 16px;
+$togglebutton-padding: 4px;
+$togglebutton-margin: 10px;
+$togglebutton-label-padding: 0px;
+$togglebutton-label-color: rgba(149, 149, 149, 0.51);
+$togglebutton-label-active-color: rgba(250, 250, 250, 0.51);
+$togglebutton-label-weight: normal;
+$togglebutton-label-active-weight: bold;
+// Define the breakpoints
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+$breakpoint-vsmall: 320px;
+$breakpoint-small: 480px;
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+$breakpoint-vmed-small: 481px;
+$breakpoint-med-small: 767px;
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+$breakpoint-vmed: 768px;
+$breakpoint-med: 1023px;
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+$breakpoint-vlarge: 1024px;
+$breakpoint-large: 1280px;
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+$breakpoint-high: 1281px;
+@mixin orientation($direction) {
+    $orientation-landscape: "(orientation:landscape)";
+    $orientation-portrait: "(orientation:portrait)";
+    @if $direction==landscape {
+        @media #{$orientation-landscape} {
+            @content;
+        }
+    }
+    @if $direction==portrait {
+        @media #{$orientation-portrait} {
+            @content;
+        }
+    }
+}
+
+//use@include screen(large) {width: 20%;}
+@mixin screen($size, $type1: min, $type2: max, $pixels: $breakpoint-small) {
+    @if $size=='small' {
+        @media screen and ($type1 + -width: $breakpoint-vsmall) and ($type2 + -width: $breakpoint-small) {
+            @content;
+        }
+    }
+    @else if $size=='med-small' {
+        @media screen and ($type1 + -width: $breakpoint-vmed-small) and ($type2 + -width: $breakpoint-med-small) {
+            @content;
+        }
+    }
+    @else if $size=='med' {
+        @media screen and ($type1 + -width: $breakpoint-vmed) and ($type2 + -width: $breakpoint-med) {
+            @content;
+        }
+    }
+    @else if $size=='large' {
+        @media screen and ($type1 + -width: $breakpoint-vlarge) and ($type2 + -width: $breakpoint-large) {
+            @content;
+        }
+    }
+    @else if $size=='high' {
+        @media screen and ($type1 + -width: $breakpoint-high + px) {
+            @content;
+        }
+    }
+    @else {
+        @content;
+    }
+}

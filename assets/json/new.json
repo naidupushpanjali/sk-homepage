@@ -1,0 +1,48 @@
+{
+  "common_question": {
+    "title": "Hello trader, Lets get to know each other better!",
+    "personal_data": [
+      {
+        "id": "1",
+        "question": "Your Full Name please?",
+        "options": null,
+        "key": "name",
+        "question_type": "string",
+        "user_answer": null,
+        "user_attempted": false
+      },
+      {
+        "id": "3",
+        "question": "What is your mobile no.?",
+        "options": null,
+        "key": "phone",
+        "question_type": "number",
+        "user_answer": null,
+        "user_attempted": false
+      },
+      {
+        "id": "4",
+        "question": "Where do we reach you on E-mail?",
+        "options": null,
+        "key": "email",
+        "question_type": "string",
+        "user_answer": null,
+        "user_attempted": false
+      },
+      {
+        "id": "5",
+        "question": "Pincode",
+        "options": null,
+        "key": "pincode",
+        "question_type": "number",
+        "user_answer": null,
+        "user_attempted": false
+      }
+    ],
+    "section_1_completed": false
+  },
+  "terms_and_conditon": false,
+  "agree_to_invest_with_sharekhan": false,
+  "is_completed": false,
+  "is_lead_user": false
+}
